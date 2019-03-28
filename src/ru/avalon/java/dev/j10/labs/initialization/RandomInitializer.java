@@ -37,6 +37,14 @@ public class RandomInitializer implements Initializer {
         /*
          * TODO(Студент): Реализовать метод initialize класса RandomInitializer
          */
+        
+        /*  TODO (Проверка№1 ЛР№3)
+            - Перед обращением к массиву следует делать проверку на правильность массива,
+            если array = null, возникает ошибка!!!
+            - Исправить!
+            - Добавить комментарии к полям и методам класса
+        */
+        
         for (int i = 0; i < array.length; i++) {
             int diff = max - min;
             Random rn = new Random();
