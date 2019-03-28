@@ -4,7 +4,7 @@ import ru.avalon.java.dev.j10.labs.Sort;
 
 /**
  * Пузырьковая сортировка (англ. bubble sort).
- *
+ * <p>
  * <p>Простой алгоритм сортировки. Для понимания и
  * реализации этот алгоритм — простейший, но эффективен он
  * лишь для небольших массивов. Сложность алгоритма: O(n^2).
@@ -20,5 +20,16 @@ public class BubbleSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса BubbleSort
          */
+
+        for (int k = array.length - 1; k > 0; k--) {
+            for (int j = 0; j < k; j++) {
+
+                if (array[j] > array[j + 1]) {
+                    int tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                }
+            }
+        }
     }
 }
