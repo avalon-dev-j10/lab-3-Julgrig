@@ -53,17 +53,16 @@ public class Main {
         RandomInitializer randomInitializer = new RandomInitializer(-50, 50);
 
         // 1.инициализация массива значениями последовательности чисел Фибоначчи
+        System.out.println("Последовательность чисел Фибоначчи:");
         new FibonacciInitializer().initialize(array);
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
-                
+        print(array);
+
         /*  TODO (Проверка№1 ЛР№3)
             - Некоректный вывод информации! Где какой массив начинается и что оно делает?
-            - Сделать вывод массива в одну строчку, для  этого используй либо 
+            - Сделать вывод массива в одну строчку, для  этого используй либо
             System.out.print(array[i] + разделитель); или Arrays.toString(masiv)
             - Сначала выведи твой сгененрированный массив, потом что ты с ним будешь делать,
-            а дальше уже отсортированный массив.
+            а дальше уже отсортированный массив.   ВЫПОЛНЕНО
         */
 
         // 2. Сумма элементов массива
@@ -72,60 +71,51 @@ public class Main {
             sum = sum + array[i];
         }
 
-        System.out.println("Сумма элементов массив равна " + sum);
+        System.out.println("Сумма элементов массива равна: " + sum);
 
 
         // 3. Инициализация  массива последовательностью случайных чисел в диапазоне от -50 до 50.
 
+        System.out.println("Последовательность случайных чисел в диапазоне от -50 до 50:");
         randomInitializer.initialize(array);
-        for (int i = 0; i < array.length; i++) {
+        print(array);
 
-            System.out.println(array[i]);
-
-        }
-
-        // 4. Отсортировать массив с использованием пузырьковой сортировки
-
+        // 4. Сортировка массива с использованием пузырьковой сортировки
+        System.out.println("Сортировка массива с использованием пузырьковой сортировки: ");
         new BubbleSort().sort(array);
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+        print(array);
 
         // 5. Инициализация  массива последовательностью случайных чисел в диапазоне от -50 до 50.
-
+        System.out.println("Последовательность случайных чисел в диапазоне от -50 до 50:");
         randomInitializer.initialize(array);
-        for (int i = 0; i < array.length; i++) {
-
-            System.out.println(array[i]);
-
-        }
+        print(array);
 
         // 6. Отсортировать массив с использованием сортировки выбором
-
+        System.out.println("Сортировка массива с использованием сортировки выбором: ");
         new SelectionSort().sort(array);
-
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+        print(array);
 
 
         // 7. Инициализация  массива последовательностью случайных чисел в диапазоне от -50 до 50.
-
+        System.out.println("Последовательность случайных чисел в диапазоне от -50 до 50:");
         randomInitializer.initialize(array);
-        for (int i = 0; i < array.length; i++) {
-
-            System.out.println(array[i]);
-
-        }
+        print(array);
 
         // 8. Отсортировать массив с использование сортировки Шелла.
+        System.out.println("Сортировка массива с использованием сортировки Шелла: ");
         new ShellSort().sort(array);
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        print(array);
+    }
+
+        public static void print(int[] array){
+            for(int i: array){
+                System.out.print(i+ " ");
+            }
+            System.out.println("");
         }
 
     }
 
-}
+
 
 

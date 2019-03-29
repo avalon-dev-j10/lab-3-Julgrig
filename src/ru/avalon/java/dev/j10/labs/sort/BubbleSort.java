@@ -24,19 +24,21 @@ public class BubbleSort implements Sort {
         /*  TODO (Проверка№1 ЛР№3)
             - Перед обращением к массиву следует делать проверку на правильность массива,
             если array = null, возникает ошибка!!!
-            - Исправить!
-            - Добавить комментарии к полям и методам класса
+            - Исправить! ВЫПОЛНЕНО
+            - Добавить комментарии к полям и методам класса  КАКИХ КОММЕНТАРИЕВ ЗДЕСЬ ЕЩЕ НЕ ХВАТАЕТ?
         */
+        if (array != null) {
+            for (int k = array.length - 1; k > 0; k--) {
+                for (int j = 0; j < k; j++) {
 
-        for (int k = array.length - 1; k > 0; k--) {
-            for (int j = 0; j < k; j++) {
-
-                if (array[j] > array[j + 1]) {
-                    int tmp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = tmp;
+                    if (array[j] > array[j + 1]) {
+                        int tmp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = tmp;
+                    }
                 }
             }
         }
     }
+
 }

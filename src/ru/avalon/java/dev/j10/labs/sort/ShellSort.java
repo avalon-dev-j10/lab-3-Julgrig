@@ -28,16 +28,21 @@ public class ShellSort implements Sort {
         /*  TODO (Проверка№1 ЛР№3)
             - Перед обращением к массиву следует делать проверку на правильность массива,
             если array = null, возникает ошибка!!!
-            - Исправить!
+            - Исправить!  ВЫПОЛНЕНО
             - Добавить комментарии к полям и методам класса
+
+
         */
 
-        int increment = array.length / 2;
-        while (increment >= 1) {
-            for (int startIndex = 0; startIndex < increment; startIndex++) {
-                insertionSort(array, startIndex, increment);
+        // Сортировка Шелла
+        if (array != null) {
+            int increment = array.length / 2;
+            while (increment >= 1) {
+                for (int startIndex = 0; startIndex < increment; startIndex++) {
+                    insertionSort(array, startIndex, increment);
+                }
+                increment = increment / 2;
             }
-            increment = increment / 2;
         }
     }
 
@@ -55,3 +60,5 @@ public class ShellSort implements Sort {
         }
     }
 }
+
+
